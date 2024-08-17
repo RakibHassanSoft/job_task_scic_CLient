@@ -8,7 +8,7 @@ const AllProducts = ({ products }) => {
             {
                 products.map((product,index) => (
                     <ProductCard 
-                        key={index} // or a unique product id if available
+                        key={index} 
                         product={product}
                     />
                 ))

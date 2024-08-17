@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ProductFilterForm from './ProductFilterForm';
+import ProductFilterForm from './Practice/ProductFilterForm';
 import AllProducts from './AllProducts';
-import SearchBar from './SearchBar';
-import Pagination from './Pagination';
+import SearchBar from './Practice/SearchBar';
+import Pagination from './Practice/Pagination';
 
 const App = () => {
   const [products, setProducts] = useState([]);

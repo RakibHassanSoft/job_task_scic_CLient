@@ -9,9 +9,11 @@ const Products = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('');
   const [brand, setBrand] = useState('');
-  const [sortField, setSortField] = useState('createdAt');
+  const [sortField, setSortField] = useState('productCreationDate');
   const [sortOrder, setSortOrder] = useState('desc');
-  const [limit] = useState(10); // Number of products per page
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
+  const [limit] = useState(12); // Number of products per page
 
   const categories = [
     'Electronics',
@@ -64,7 +66,7 @@ const Products = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [currentPage, searchTerm, category, brand, sortField, sortOrder]);
+  }, [currentPage, searchTerm, category, brand, sortField, sortOrder, minPrice, maxPrice]);
 
   const fetchProducts = async () => {
     try {
@@ -74,9 +76,11 @@ const Products = () => {
           limit,
           search: searchTerm,
           category,
-          brands: brand, // Convert to a comma-separated string if needed
+          brands: brand,
           sort: sortField,
-          order: sortOrder
+          order: sortOrder,
+          minPrice,
+          maxPrice
         }
       });
 
@@ -97,6 +101,7 @@ const Products = () => {
     }
   };
 
+
   const renderPageNumbers = () => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
@@ -115,18 +120,22 @@ const Products = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="mb-4 flex flex-wrap items-center">
+      <div className="flex justify-center mt-4 mb-4 ">
         <input
           type="text"
-          placeholder="Search by name"
+          placeholder="Search products..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border rounded p-2 mr-4 mb-2"
+          className="border rounded-3xl p-4 w-full h-16 md:w-1/3 lg:w-1/3 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition ease-in-out duration-150"
         />
+      </div>
+
+      <div className="mb-4 flex flex-wrap justify-center items-center gap-4">
+
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="border rounded p-2 mr-4 mb-2"
+          className="border rounded-lg p-3 w-full md:w-1/4 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">All Categories</option>
           {categories.map((cat) => (
@@ -138,7 +147,7 @@ const Products = () => {
         <select
           value={brand}
           onChange={(e) => setBrand(e.target.value)}
-          className="border rounded p-2 mr-4 mb-2"
+          className="border rounded-lg p-3 w-full md:w-1/4 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">All Brands</option>
           {brands.map((br) => (
@@ -147,36 +156,50 @@ const Products = () => {
             </option>
           ))}
         </select>
+        <input
+          type="number"
+          placeholder="Min Price"
+          value={minPrice}
+          onChange={(e) => setMinPrice(e.target.value)}
+          className="border rounded-lg p-3 w-full md:w-1/4 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="number"
+          placeholder="Max Price"
+          value={maxPrice}
+          onChange={(e) => setMaxPrice(e.target.value)}
+          className="border rounded-lg p-3 w-full md:w-1/4 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
         <select
           value={sortField}
           onChange={(e) => setSortField(e.target.value)}
-          className="border rounded p-2 mr-4 mb-2"
+          className="border rounded-lg p-3 w-full md:w-1/4 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="createdAt">Date Added</option>
+          <option value="productCreationDate">Latest</option>
           <option value="price">Price</option>
         </select>
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="border rounded p-2 mb-2"
+          className="border rounded-lg p-3 w-full md:w-1/4 bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="desc">Descending</option>
           <option value="asc">Ascending</option>
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
 
       {totalPages > 1 && (
-        <div className="mt-4 flex items-center justify-between">
+        <div className="mt-6 flex items-center justify-between">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
-            className="bg-gray-200 px-4 py-2 rounded"
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 disabled:bg-gray-300"
           >
             Prev
           </button>
@@ -185,7 +208,7 @@ const Products = () => {
               <>
                 <button
                   onClick={() => handlePageChange(1)}
-                  className="mx-1 px-3 py-1 rounded bg-gray-200 text-gray-700"
+                  className="mx-1 px-3 py-1 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300"
                 >
                   1
                 </button>
@@ -198,7 +221,7 @@ const Products = () => {
                 <span className="mx-1 text-gray-700">...</span>
                 <button
                   onClick={() => handlePageChange(totalPages)}
-                  className="mx-1 px-3 py-1 rounded bg-gray-200 text-gray-700"
+                  className="mx-1 px-3 py-1 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300"
                 >
                   {totalPages}
                 </button>
@@ -208,13 +231,14 @@ const Products = () => {
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
-            className="bg-gray-200 px-4 py-2 rounded"
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 disabled:bg-gray-300"
           >
             Next
           </button>
         </div>
       )}
     </div>
+
   );
 };
 

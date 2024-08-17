@@ -1,3 +1,5 @@
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
+
 // Single ProductCard Component
 const ProductCard = ({ product }) => {
     if (!product) return <div>Loading...</div>;
@@ -14,19 +16,18 @@ const ProductCard = ({ product }) => {
     } = product;
   
     const renderStars = (rating) => {
-      const stars = Math.round(rating);
+      const fullStars = Math.floor(rating); // Full stars (e.g., 2 in 2.3)
+      const hasHalfStar = rating - fullStars >= 0.5; // Whether there is a half star (e.g., true in 2.3)
+      const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Remaining stars to be empty
+    
       return (
-        <div className="flex items-center">
-          {[...Array(5)].map((_, index) => (
-            <svg
-              key={index}
-              className={`w-5 h-5 ${index < stars ? 'text-yellow-500' : 'text-gray-300'}`}
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 17.27L18.18 21 16.54 13.97 22 9.24l-6.36-.55L12 2 8.36 8.69 2 9.24l5.46 4.73L5.82 21z" />
-            </svg>
+        <div className="flex">
+          {Array(fullStars).fill(0).map((_, index) => (
+            <FaStar key={index} className="text-yellow-400" />
+          ))}
+          {hasHalfStar && <FaStarHalfAlt className="text-yellow-400" />}
+          {Array(emptyStars).fill(0).map((_, index) => (
+            <FaRegStar key={index} className="text-yellow-400" />
           ))}
         </div>
       );
