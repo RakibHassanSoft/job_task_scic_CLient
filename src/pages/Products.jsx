@@ -70,7 +70,8 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/products', {
+      // const response = await axios.get('http://localhost:5000/products', {
+      const response = await axios.get('https://job-task-scic-server-2.onrender.com/products', {
         params: {
           page: currentPage,
           limit,
