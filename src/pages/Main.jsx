@@ -1,21 +1,16 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { FaSignOutAlt } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Main = () => {
   return (
-    <div>
-     
-     <Navbar></Navbar>
-    
-
-      {/* Outlet for nested routes */}
-      <main className="p-4">
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow p-4">
         <Outlet />
       </main>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
