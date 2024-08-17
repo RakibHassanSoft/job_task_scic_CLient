@@ -13,55 +13,21 @@ const Products = () => {
   const [sortOrder, setSortOrder] = useState('desc');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state
   const [limit] = useState(12); // Number of products per page
 
   const categories = [
-    'Electronics',
-    'Wearables',
-    'Home Entertainment',
-    'Computers',
-    'Audio',
-    'Furniture',
-    'Outdoor',
-    'Accessories',
-    'Home Automation',
-    'Security',
-    'Kitchen',
-    'Pet Supplies',
-    'Home Appliances',
-    'Photography',
-    'Garden',
+    'Electronics', 'Wearables', 'Home Entertainment', 'Computers', 'Audio', 
+    'Furniture', 'Outdoor', 'Accessories', 'Home Automation', 'Security', 
+    'Kitchen', 'Pet Supplies', 'Home Appliances', 'Photography', 'Garden', 
     'Health & Wellness'
   ];
 
   const brands = [
-    'Sony',
-    'Apple',
-    'Samsung',
-    'Dell',
-    'JBL',
-    'Herman Miller',
-    'Hydro Flask',
-    'Anker',
-    'Nest',
-    'Bose',
-    'DJI',
-    'Fitbit',
-    'Ring',
-    'FlexiSpot',
-    'Philips',
-    'Corsair',
-    'Logitech',
-    'LITOM',
-    'August',
-    'Vitamix',
-    'GoPro',
-    'Instant Pot',
-    'Tile',
-    'Dyson',
-    'Oculus',
-    'Nespresso',
-    'Roku'
+    'Sony', 'Apple', 'Samsung', 'Dell', 'JBL', 'Herman Miller', 'Hydro Flask', 
+    'Anker', 'Nest', 'Bose', 'DJI', 'Fitbit', 'Ring', 'FlexiSpot', 'Philips', 
+    'Corsair', 'Logitech', 'LITOM', 'August', 'Vitamix', 'GoPro', 'Instant Pot', 
+    'Tile', 'Dyson', 'Oculus', 'Nespresso', 'Roku'
   ];
 
   useEffect(() => {
@@ -69,8 +35,8 @@ const Products = () => {
   }, [currentPage, searchTerm, category, brand, sortField, sortOrder, minPrice, maxPrice]);
 
   const fetchProducts = async () => {
+    setLoading(true); // Set loading to true before fetching data
     try {
-      // const response = await axios.get('http://localhost:5000/products', {
       const response = await axios.get('https://job-task-scic-server-2.onrender.com/products', {
         params: {
           page: currentPage,
@@ -93,6 +59,8 @@ const Products = () => {
       }
     } catch (error) {
       console.error('Failed to fetch products', error);
+    } finally {
+      setLoading(false); // Set loading to false after fetching data
     }
   };
 
@@ -101,7 +69,6 @@ const Products = () => {
       setCurrentPage(page);
     }
   };
-
 
   const renderPageNumbers = () => {
     const pageNumbers = [];
@@ -132,7 +99,6 @@ const Products = () => {
       </div>
 
       <div className="mb-4 flex flex-wrap justify-center items-center gap-4">
-
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -189,11 +155,28 @@ const Products = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <ProductCard key={product._id} product={product} />
-        ))}
-      </div>
+      {loading ? (
+        // Display a loading indicator or skeleton loader while fetching data
+        <div className="flex flex-wrap justify-center gap-6">
+          {Array.from({ length: 12 }).map((_, index) => (
+            <div key={index} className="flex flex-col m-8 rounded shadow-md w-60 sm:w-80 animate-pulse h-96">
+              <div className="h-48 rounded-t dark:bg-gray-300"></div>
+              <div className="flex-1 px-4 py-8 space-y-4 sm:p-8 dark:bg-gray-50">
+                <div className="w-full h-6 rounded dark:bg-gray-300"></div>
+                <div className="w-full h-6 rounded dark:bg-gray-300"></div>
+                <div className="w-3/4 h-6 rounded dark:bg-gray-300"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        // Display products when data is loaded
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
+        </div>
+      )}
 
       {totalPages > 1 && (
         <div className="mt-6 flex items-center justify-between">
@@ -239,7 +222,6 @@ const Products = () => {
         </div>
       )}
     </div>
-
   );
 };
 
