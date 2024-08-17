@@ -1,0 +1,402 @@
+[
+  {
+      "productName": "Sony WH-1000XM4 Wireless Bluetooth Headphones",
+      "brand": "Sony",
+      "productImage": "https://www.bhphotovideo.com/images/images2500x2500/sony_wh1000xm4_b_wh_1000xm4_wireless_noise_canceling_over_ear_1582549.jpg",
+      "description": "High-quality wireless headphones with noise cancellation.",
+      "price": 349.99,
+      "category": "Electronics",
+      "ratings": 1.8,
+      "productCreationDate": "2024-08-14T10:30:00Z"
+  },
+  {
+      "productName": "Apple Watch Series 5",
+      "brand": "Apple",
+      "productImage": "https://timeandtidewatches.com/wp-content/uploads/2019/09/Apple_watch_series_5-space-black-titanium-case-viper-dark-091019.jpg",
+      "description": "Advanced smartwatch with health tracking features.",
+      "price": 399.99,
+      "category": "Wearables",
+      "ratings": 3.7,
+      "productCreationDate": "2024-08-14T11:00:00Z"
+  },
+  {
+      "productName": "Samsung 55-Inch 4K Ultra HD Smart TV",
+      "brand": "Samsung",
+      "productImage": "https://th.bing.com/th/id/OIP.6F_J5KDYJqPWiUuWIygz_wHaE8?rs=1&pid=ImgDetMain",
+      "description": "55-inch 4K UHD TV with HDR support.",
+      "price": 699.99,
+      "category": "Home Entertainment",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-13T14:15:00Z"
+  },
+  {
+      "productName": "Dell XPS 15 Gaming Laptop",
+      "brand": "Dell",
+      "productImage": "https://th.bing.com/th/id/OIP.aogtGlg5p2mP0rR1XnR2aAHaEh?rs=1&pid=ImgDetMain",
+      "description": "High-performance gaming laptop with RTX graphics.",
+      "price": 1599.99,
+      "category": "Computers",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-12T09:45:00Z"
+  },
+  {
+      "productName": "JBL Charge 5 Portable Bluetooth Speaker",
+      "brand": "JBL",
+      "productImage": "https://th.bing.com/th/id/R.691af3adbf553409ba956339017b4675?rik=IrGzi7xb2uJH0Q&pid=ImgRaw&r=0",
+      "description": "Compact speaker with deep bass and 12-hour battery life.",
+      "price": 179.99,
+      "category": "Audio",
+      "ratings": 2.7,
+      "productCreationDate": "2024-08-14T08:30:00Z"
+  },
+  {
+      "productName": "Herman Miller Aeron Ergonomic Office Chair",
+      "brand": "Herman Miller",
+      "productImage": "https://th.bing.com/th/id/OIP.yNDs3Stsva0-2gZ0LaYoIgAAAA?rs=1&pid=ImgDetMain",
+      "description": "Comfortable office chair with lumbar support and adjustable height.",
+      "price": 1399.99,
+      "category": "Furniture",
+      "ratings": 0,
+      "productCreationDate": "2024-08-11T15:00:00Z"
+  },
+  {
+      "productName": "Hydro Flask Stainless Steel Water Bottle",
+      "brand": "Hydro Flask",
+      "productImage": "https://i5.walmartimages.com/asr/e384f691-33dc-4e38-91b6-3465f55003e9.af6955b47ea67ffd037c12a5fd00ae4a.jpeg",
+      "description": "Insulated water bottle that keeps drinks cold for 24 hours.",
+      "price": 39.99,
+      "category": "Outdoor",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-10T12:20:00Z"
+  },
+  {
+      "productName": "Anker Wireless Charging Pad",
+      "brand": "Anker",
+      "productImage": "https://th.bing.com/th/id/OIP.oy4Se8LhdvDeFB9ULFw9vAHaGk?rs=1&pid=ImgDetMain",
+      "description": "Fast wireless charger compatible with all Qi-enabled devices.",
+      "price": 49.99,
+      "category": "Accessories",
+      "ratings": 4.4,
+      "productCreationDate": "2024-08-09T10:15:00Z"
+  },
+  {
+      "productName": "Nest Learning Thermostat",
+      "brand": "Nest",
+      "productImage": "https://th.bing.com/th/id/OIP.NGFiY7702mnqhW15kKBE0AHaHa?rs=1&pid=ImgDetMain",
+      "description": "Energy-efficient thermostat with remote control via smartphone.",
+      "price": 249.99,
+      "category": "Home Automation",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-08T13:40:00Z"
+  },
+  {
+      "productName": "Bose QuietComfort Earbuds",
+      "brand": "Bose",
+      "productImage": "https://th.bing.com/th/id/R.d6743f2ba84f8bcc522ee6d8a267dfc4?rik=cRpzIVRBsXp%2bwg&pid=ImgRaw&r=0",
+      "description": "In-ear earbuds with active noise cancellation and long battery life.",
+      "price": 279.99,
+      "category": "Audio",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-14T14:10:00Z"
+  },
+  {
+      "productName": "DJI OM 4 Smartphone Gimbal Stabilizer",
+      "brand": "DJI",
+      "productImage": "https://th.bing.com/th/id/OIP.RfZ9BfA4SbaQARb74_CFHgAAAA?rs=1&pid=ImgDetMain",
+      "price": 149.99,
+      "category": "Photography",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-14T12:50:00Z"
+  },
+  {
+      "productName": "Fitbit Charge 4 Fitness Tracker",
+      "brand": "Fitbit",
+      "productImage": "https://th.bing.com/th/id/OIP.PhEmjEhtOnvGaSBF3EtXagHaHa?rs=1&pid=ImgDetMain",
+      "description": "Water-resistant fitness tracker with heart rate monitoring.",
+      "price": 129.99,
+      "category": "Wearables",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-14T09:00:00Z"
+  },
+  {
+      "productName": "Ring Indoor Security Camera",
+      "brand": "Ring",
+      "productImage": "https://th.bing.com/th/id/OIP.kecCOwdCH62h34s9Nkb4VAAAAA?rs=1&pid=ImgDetMain",
+      "description": "1080p HD camera with night vision and two-way audio.",
+      "price": 59.99,
+      "category": "Security",
+      "ratings": 4.4,
+      "productCreationDate": "2024-08-13T16:45:00Z"
+  },
+  {
+      "productName": "FlexiSpot Electric Standing Desk",
+      "brand": "FlexiSpot",
+      "productImage": "https://th.bing.com/th/id/OIP.-bQYHOQm9EgjmXQYWalX_wHaHa?rs=1&pid=ImgDetMain",
+      "description": "Height-adjustable standing desk with memory presets.",
+      "price": 499.99,
+      "category": "Furniture",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-12T11:25:00Z"
+  },
+  {
+      "productName": "Philips Hue Smart LED Light Bulbs",
+      "brand": "Philips",
+      "productImage": "https://th.bing.com/th/id/OIP.APaJ-EOG8wxku_BwoAqCsgHaHM?rs=1&pid=ImgDetMain",
+      "description": "Color-changing LED bulbs controllable via app or voice assistant.",
+      "price": 59.99,
+      "category": "Home Automation",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-11T08:50:00Z"
+  },
+  {
+      "productName": "Corsair K95 RGB Platinum Mechanical Gaming Keyboard",
+      "brand": "Corsair",
+      "productImage": "https://th.bing.com/th/id/R.c02457ad412c0a685be603930102bf60?rik=BqLRnCVJxkeEaQ&pid=ImgRaw&r=0",
+      "description": "RGB backlit mechanical keyboard with customizable keys.",
+      "price": 199.99,
+      "category": "Computers",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-10T17:10:00Z"
+  },
+  {
+      "productName": "Logitech MX Master 3 Wireless Mouse",
+      "brand": "Logitech",
+      "productImage": "https://th.bing.com/th/id/R.ea099d1a52fd1e3d2a4b096a1654a835?rik=Tic8eRyvqUWFZw&pid=ImgRaw&r=0",
+      "description": "Ergonomic wireless mouse with adjustable DPI settings.",
+      "price": 99.99,
+      "category": "Accessories",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-09T14:35:00Z"
+  },
+  {
+      "productName": "LITOM Solar Outdoor Security Lights",
+      "brand": "LITOM",
+      "productImage": "https://th.bing.com/th/id/OIP.-PixrG7xWb_-gh7FqzlP4QHaF9?rs=1&pid=ImgDetMain",
+      "description": "Motion-activated LED lights for enhanced outdoor security.",
+      "price": 39.99,
+      "category": "Security",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-08T18:55:00Z"
+  },
+  {
+      "productName": "August Smart Lock Pro + Connect",
+      "brand": "August",
+      "productImage": "https://th.bing.com/th/id/OIP.CeXITcloNu7FMpACbUY8tQAAAA?rs=1&pid=ImgDetMain",
+      "description": "Keyless smart lock with fingerprint recognition and app control.",
+      "price": 229.99,
+      "category": "Security",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-07T12:05:00Z"
+  },
+  {
+      "productName": "Vitamix A3500 Ascent Series Smart Blender",
+      "brand": "Vitamix",
+      "productImage": "https://th.bing.com/th/id/OIP.83utfyUGSY4_m-BavUazJAAAAA?rs=1&pid=ImgDetMain",
+      "description": "Powerful blender for smoothies, soups, and frozen desserts.",
+      "price": 549.99,
+      "category": "Kitchen Appliances",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-06T11:45:00Z"
+  },
+  {
+      "productName": "GoPro HERO9 Black Action Camera",
+      "brand": "GoPro",
+      "productImage": "https://static.gopro.com/assets/blta2b8522e5372af40/blte67f3d03a42f605a/6116fb12cf33c613b2c060b3/pdp-h9b-gallery-angle-1920-2x.png",
+      "description": "5K action camera with stabilization and waterproof design.",
+      "price": 399.99,
+      "category": "Photography",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-14T13:30:00Z"
+  },
+  {
+      "productName": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+      "brand": "Instant Pot",
+      "productImage": "https://th.bing.com/th/id/OIP.0Bx10d_yBJDaXM48q8OYJAHaHa?rs=1&pid=ImgDetMain",
+      "description": "Multifunctional cooker with 7 cooking modes.",
+      "price": 99.99,
+      "category": "Kitchen Appliances",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-14T15:20:00Z"
+  },
+  {
+      "productName": "Tile Mate (2022) Bluetooth Tracker",
+      "brand": "Tile",
+      "productImage": "https://th.bing.com/th/id/R.f2aac8fc39f60b57e51f16d986aa5573?rik=G6YzPJDFnDKTdQ&pid=ImgRaw&r=0",
+      "description": "Compact tracker for finding lost items via smartphone.",
+      "price": 24.99,
+      "category": "Accessories",
+      "ratings": 4.5,
+      "productCreationDate": "2024-08-14T11:15:00Z"
+  },
+  {
+      "productName": "Dyson V11 Torque Drive Cordless Vacuum Cleaner",
+      "brand": "Dyson",
+      "productImage": "https://images.homedepot-static.com/productImages/dbc4343a-7f26-432e-abff-a0ef09e78d1b/svn/dyson-stick-vacuums-268731-01-64_1000.jpg",
+      "description": "Powerful cordless vacuum with advanced filtration system.",
+      "price": 699.99,
+      "category": "Home Appliances",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-14T16:35:00Z"
+  },
+  {
+      "productName": "Apple AirPods Pro (2nd Generation)",
+      "brand": "Apple",
+      "productImage": "https://th.bing.com/th/id/OIP.134VJ44OStJo8DrF8-JnyAHaHa?rs=1&pid=ImgDetMain",
+      "description": "Wireless earbuds with active noise cancellation.",
+      "price": 249.99,
+      "category": "Audio",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-13T09:10:00Z"
+  },
+  {
+      "productName": "Oculus Quest 2 VR Headset",
+      "brand": "Oculus",
+      "productImage": "https://th.bing.com/th/id/OIP._elYDvdMdeKUMvq0R9ivzwAAAA?rs=1&pid=ImgDetMain",
+      "description": "Standalone VR headset with 128GB storage.",
+      "price": 399.99,
+      "category": "Gaming",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-12T12:30:00Z"
+  },
+  {
+      "productName": "Sony Alpha a6400 Mirrorless Digital Camera",
+      "brand": "Sony",
+      "productImage": "https://th.bing.com/th/id/R.628bf85d52c7eb9456e3d319b77445fe?rik=skfOydlLRQfAcw&pid=ImgRaw&r=0",
+      "description": "Compact mirrorless camera with 24.2MP sensor and 4K video.",
+      "price": 899.99,
+      "category": "Photography",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-11T10:20:00Z"
+  },
+  {
+      "productName": "Nespresso VertuoPlus Coffee and Espresso Maker",
+      "brand": "Nespresso",
+      "productImage": "https://th.bing.com/th/id/OIP.YqMLu_z8mcPiVQK26S7yOAAAAA?rs=1&pid=ImgDetMain",
+      "description": "Versatile coffee and espresso maker with one-touch brewing.",
+      "price": 159.99,
+      "category": "Kitchen Appliances",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-10T08:40:00Z"
+  },
+  {
+      "productName": "Roku Streaming Stick+",
+      "brand": "Roku",
+      "productImage": "https://th.bing.com/th/id/OIP.GD04gV92AQD5fXk_xJhhswHaE8?rs=1&pid=ImgDetMain",
+      "description": "Portable streaming stick with 4K HDR support and voice remote.",
+      "price": 49.99,
+      "category": "Home Entertainment",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-09T16:00:00Z"
+  },
+  {
+      "productName": "Bissell ProHeat 2X Revolution Pet Pro Carpet Cleaner",
+      "brand": "Bissell",
+      "productImage": "https://th.bing.com/th/id/OIP.lbmPF6I223MmXsxk3ji1hAHaHa?rs=1&pid=ImgDetMain",
+      "description": "Carpet cleaner designed for homes with pets, with powerful suction.",
+      "price": 279.99,
+      "category": "Home Appliances",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-08T10:50:00Z"
+  },
+  {
+      "productName": "Canon EOS Rebel T7 DSLR Camera Bundle",
+      "brand": "Canon",
+      "productImage": "https://th.bing.com/th/id/OIP.xHhJMpnFFTV2qdjby7JffAHaHa?rs=1&pid=ImgDetMain",
+      "description": "Entry-level DSLR camera with 18-55mm lens and accessories.",
+      "price": 449.99,
+      "category": "Photography",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-07T15:30:00Z"
+  },
+  {
+      "productName": "Samsung Galaxy S21 Ultra 5G Smartphone",
+      "brand": "Samsung",
+      "productImage": "https://th.bing.com/th/id/OIP.eaQwQP34Fnu_mPg6aJ69fgAAAA?rs=1&pid=ImgDetMain",
+      "description": "High-end smartphone with 108MP camera and 5G connectivity.",
+      "price": 1199.99,
+      "category": "Mobile",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-06T17:50:00Z"
+  },
+  {
+      "productName": "Whirlpool 24.7 cu. ft. French Door Refrigerator",
+      "brand": "Whirlpool",
+      "productImage": "https://th.bing.com/th/id/R.30d8ad2e23cbbed20a5eb42798597c35?rik=LCv2nkVg%2bUd8GA&riu=http%3a%2f%2fmobileimages.lowes.com%2fproduct%2fconverted%2f883049%2f883049409238.jpg&ehk=p%2flKolMrFZ0HbLKnUQ%2bJkre1JVdgzkqxQJQ2IKD2rfM%3d&risl=&pid=ImgRaw&r=0",
+      "description": "Spacious refrigerator with adjustable shelves and energy efficiency.",
+      "price": 2499.99,
+      "category": "Home Appliances",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-05T09:25:00Z"
+  },
+  {
+      "productName": "Miele Complete C3 Marin Canister Vacuum Cleaner",
+      "brand": "Miele",
+      "productImage": "https://th.bing.com/th/id/OIP.SqqDN9FZ2Y0yoB8UKgG5SgAAAA?rs=1&pid=ImgDetMain",
+      "description": "High-performance vacuum cleaner with HEPA filtration.",
+      "price": 1099.99,
+      "category": "Home Appliances",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-04T14:40:00Z"
+  },
+  {
+      "productName": "Garmin Forerunner 945 GPS Running Watch",
+      "brand": "Garmin",
+      "productImage": "https://th.bing.com/th/id/OIP.Su32J2AG0yLOeSnh0NjuSQAAAA?rs=1&pid=ImgDetMain",
+      "description": "Advanced running watch with GPS, heart rate monitoring, and music storage.",
+      "price": 599.99,
+      "category": "Wearables",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-03T08:10:00Z"
+  },
+  {
+      "productName": "Theragun PRO Percussive Therapy Device",
+      "brand": "Theragun",
+      "productImage": "https://th.bing.com/th/id/OIP.uKXtOI1_ITzePFhQudjXgAHaHa?rs=1&pid=ImgDetMain",
+      "description": "Professional-grade percussive therapy device for deep muscle treatment.",
+      "price": 599.99,
+      "category": "Health",
+      "ratings": 4.8,
+      "productCreationDate": "2024-08-14T17:15:00Z"
+  },
+  {
+      "productName": "Breville BES870XL Barista Express Espresso Machine",
+      "brand": "Breville",
+      "productImage": "https://th.bing.com/th/id/OIP.LjuOosYcAOSJWJQHfLzAvgHaHa?rs=1&pid=ImgDetMain",
+      "description": "Semi-automatic espresso machine with built-in grinder and steam wand.",
+      "price": 699.99,
+      "category": "Kitchen Appliances",
+      "ratings": 4.7,
+      "productCreationDate": "2024-08-14T16:00:00Z"
+  },
+  {
+      "productName": "NETGEAR Nighthawk X6S AC4000 Tri-Band WiFi Router",
+      "brand": "NETGEAR",
+      "productImage": "https://th.bing.com/th/id/OIP.cgabC4dRCoaSlZSxrkTl8AHaEb?rs=1&pid=ImgDetMain",
+      "description": "High-speed tri-band WiFi router with advanced security features.",
+      "price": 249.99,
+      "category": "Networking",
+      "ratings": 4.6,
+      "productCreationDate": "2024-08-14T18:00:00Z"
+  },
+  {
+    "productName": "Fitbit Charge 5 Advanced Fitness Tracker",
+    "brand": "Fitbit",
+    "productImage": "https://th.bing.com/th/id/OIP.0e9tLK790WgnRdrz00R3twAAAA?rs=1&pid=ImgDetMain",
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, and sleep tracking.",
+    "price": 179.99,
+    "category": "Wearables",
+    "ratings": 4.7,
+    "productCreationDate": "2024-08-14T19:10:00Z"
+},
+{
+    "productName": "Ring Video Doorbell Pro 2",
+    "brand": "Ring",
+    "productImage": "https://th.bing.com/th/id/OIP.QnyHTePkTmNP6vZ9PzMcRAAAAA?rs=1&pid=ImgDetMain",
+    "description": "Smart video doorbell with 3D motion detection and 1536p HD video.",
+    "price": 249.99,
+    "category": "Smart Home",
+    "ratings": 4.8,
+    "productCreationDate": "2024-08-14T19:25:00Z"
+}
+
+]
