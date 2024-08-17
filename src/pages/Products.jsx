@@ -1,41 +1,70 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ProductCard  from "./ProductCard"
+import ProductCard from './ProductCard';
 
-
-// Main Products Component
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('');
+  const [brand, setBrand] = useState('');
   const [sortField, setSortField] = useState('createdAt');
   const [sortOrder, setSortOrder] = useState('desc');
   const [limit] = useState(10); // Number of products per page
 
   const categories = [
-    "Electronics",
-    "Wearables",
-    "Home Entertainment",
-    "Computers",
-    "Audio",
-    "Furniture",
-    "Outdoor",
-    "Accessories",
-    "Home Automation",
-    "Security",
-    "Kitchen",
-    "Pet Supplies",
-    "Home Appliances",
-    "Photography",
-    "Garden",
-    "Health & Wellness"
+    'Electronics',
+    'Wearables',
+    'Home Entertainment',
+    'Computers',
+    'Audio',
+    'Furniture',
+    'Outdoor',
+    'Accessories',
+    'Home Automation',
+    'Security',
+    'Kitchen',
+    'Pet Supplies',
+    'Home Appliances',
+    'Photography',
+    'Garden',
+    'Health & Wellness'
+  ];
+
+  const brands = [
+    'Sony',
+    'Apple',
+    'Samsung',
+    'Dell',
+    'JBL',
+    'Herman Miller',
+    'Hydro Flask',
+    'Anker',
+    'Nest',
+    'Bose',
+    'DJI',
+    'Fitbit',
+    'Ring',
+    'FlexiSpot',
+    'Philips',
+    'Corsair',
+    'Logitech',
+    'LITOM',
+    'August',
+    'Vitamix',
+    'GoPro',
+    'Instant Pot',
+    'Tile',
+    'Dyson',
+    'Oculus',
+    'Nespresso',
+    'Roku'
   ];
 
   useEffect(() => {
     fetchProducts();
-  }, [currentPage, searchTerm, category, sortField, sortOrder]);
+  }, [currentPage, searchTerm, category, brand, sortField, sortOrder]);
 
   const fetchProducts = async () => {
     try {
@@ -45,9 +74,10 @@ const Products = () => {
           limit,
           search: searchTerm,
           category,
+          brands: brand, // Convert to a comma-separated string if needed
           sort: sortField,
-          order: sortOrder,
-        },
+          order: sortOrder
+        }
       });
 
       if (response.data && response.data.products) {
@@ -85,18 +115,18 @@ const Products = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <div className="mb-4">
+      <div className="mb-4 flex flex-wrap items-center">
         <input
           type="text"
           placeholder="Search by name"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border rounded p-2 mr-4"
+          className="border rounded p-2 mr-4 mb-2"
         />
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="border rounded p-2 mr-4"
+          className="border rounded p-2 mr-4 mb-2"
         >
           <option value="">All Categories</option>
           {categories.map((cat) => (
@@ -106,9 +136,21 @@ const Products = () => {
           ))}
         </select>
         <select
+          value={brand}
+          onChange={(e) => setBrand(e.target.value)}
+          className="border rounded p-2 mr-4 mb-2"
+        >
+          <option value="">All Brands</option>
+          {brands.map((br) => (
+            <option key={br} value={br}>
+              {br}
+            </option>
+          ))}
+        </select>
+        <select
           value={sortField}
           onChange={(e) => setSortField(e.target.value)}
-          className="border rounded p-2 mr-4"
+          className="border rounded p-2 mr-4 mb-2"
         >
           <option value="createdAt">Date Added</option>
           <option value="price">Price</option>
@@ -116,7 +158,7 @@ const Products = () => {
         <select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
-          className="border rounded p-2"
+          className="border rounded p-2 mb-2"
         >
           <option value="desc">Descending</option>
           <option value="asc">Ascending</option>
@@ -124,11 +166,10 @@ const Products = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map(product => (
+        {products.map((product) => (
           <ProductCard key={product._id} product={product} />
         ))}
       </div>
-      {/* page area  */}
 
       {totalPages > 1 && (
         <div className="mt-4 flex items-center justify-between">
